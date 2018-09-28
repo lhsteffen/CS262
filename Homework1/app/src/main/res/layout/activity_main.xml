@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/first_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/value_1" />
+
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/first_value"
+        android:hint="@string/first_hint"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/second_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_value"
+        android:layout_marginBottom="20dp"
+        android:text="@string/second_hint" />
+
+    <EditText
+        android:id="@+id/editText_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/second_value"
+        android:layout_toRightOf="@+id/second_value"
+        android:layout_below="@+id/editText_main"
+        android:hint="@string/second_value"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/op_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_value"
+        android:layout_marginBottom="20dp"
+        android:text="@string/operations_sign"/>
+
+    <Spinner
+        android:id="@+id/operations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_value"
+        android:layout_toRightOf="@+id/op_sign"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/op_sign"
+        android:text="Calculate"
+        android:layout_marginRight="10dp"
+        android:onClick="calculateNumber"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/button"
+        android:layout_below="@+id/operations"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
