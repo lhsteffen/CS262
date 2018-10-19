@@ -33,6 +33,7 @@ CREATE TABLE PlayerGame (
 
 CREATE TABLE Properties (
 	propertyID integer CONSTRAINT location_check CHECK (1 <= propertyID AND propertyID <= 40),
+	gameID integer REFERENCES Game(ID),
 	owner integer REFERENCES Player(ID),
 	houses integer,
 	hotels boolean
@@ -62,10 +63,10 @@ INSERT INTO PlayerGame VALUES (2, 3, 500.00, 50, 40);
 INSERT INTO PlayerGame VALUES (3, 2, 0.00, 0, 31);
 INSERT INTO PlayerGame VALUES (3, 3, 5500.00, 550, 3);
 
-INSERT INTO Properties VALUES (2, 3, 3, FALSE);
-INSERT INTO Properties VALUES (5, 3, 0, TRUE);
-INSERT INTO Properties VALUES (30, 2, 4, FALSE);
-INSERT INTO Properties VALUES (36, 1, 2, FALSE);
-INSERT INTO Properties VALUES (25, 1, 4, FALSE);
-INSERT INTO Properties VALUES (20, 2, 0, TRUE);
-INSERT INTO Properties VALUES (27, 3, 0, TRUE);
+INSERT INTO Properties VALUES (2, 1, 3, 3, FALSE);
+INSERT INTO Properties VALUES (5, 2, 3, 0, TRUE);
+INSERT INTO Properties VALUES (30, 1, 2, 4, FALSE);
+INSERT INTO Properties VALUES (36, 3, 1, 2, FALSE);
+INSERT INTO Properties VALUES (25, 2, 1, 4, FALSE);
+INSERT INTO Properties VALUES (20, 3, 2, 0, TRUE);
+INSERT INTO Properties VALUES (27, 1, 3, 0, TRUE);
