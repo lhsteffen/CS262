@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">homework2</string>
+    <string name="enter_prompt">Enter the player number</string>
+    <string name="instructions">Enter the player number or simply hit enter to see all players.</string>
+    <string name="fetch">Fetch</string>
+</resources>
